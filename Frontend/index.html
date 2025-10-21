@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniCore Comisiones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MiniCore Comisiones</h1>
+
+    <!-- SECCIÓN VENDEDOR -->
+    <section class="card">
+      <h2>Agregar Vendedor</h2>
+      <form id="formVendedor">
+        <input type="text" id="nombreVendedor" placeholder="Nombre" required>
+        <input type="email" id="emailVendedor" placeholder="Email" required>
+        <button type="submit">Agregar Vendedor</button>
+      </form>
+      <ul id="listaVendedores"></ul>
+    </section>
+
+    <!-- SECCIÓN VENTA -->
+    <section class="card">
+      <h2>Agregar Venta</h2>
+      <form id="formVenta">
+        <select id="vendedorIdVenta" required>
+          <option value="">Seleccione un vendedor</option>
+        </select>
+        <input type="number" id="montoVenta" placeholder="Monto" required>
+        <input type="date" id="fechaVenta" required>
+        <button type="submit">Agregar Venta</button>
+      </form>
+      <ul id="listaVentas"></ul>
+    </section>
+
+    <!-- SECCIÓN COMISIONES -->
+    <section class="card">
+      <h2>Filtrar Comisiones</h2>
+      <div class="fecha-rango">
+        <label>Desde: <input type="date" id="fechaInicio"></label>
+        <label>Hasta: <input type="date" id="fechaFin"></label>
+        <button id="btnFiltrarComisiones">Filtrar</button>
+      </div>
+      <ul id="listaComisiones"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
